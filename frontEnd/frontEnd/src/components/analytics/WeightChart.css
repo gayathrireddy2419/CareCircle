@@ -1,0 +1,128 @@
+/* ==========================================
+   src/components/analytics/WeightChart.css
+========================================== */
+
+.weight-card{
+    background:#ffffff;
+    border-radius:20px;
+    padding:24px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:all .3s ease;
+    overflow:hidden;
+}
+
+.weight-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 35px rgba(16,185,129,.18);
+}
+
+/* ================= HEADER ================= */
+
+.weight-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.weight-header h3{
+    margin:0;
+    font-size:22px;
+    color:#1e293b;
+}
+
+.weight-header p{
+    margin-top:5px;
+    color:#64748b;
+    font-size:14px;
+}
+
+.weight-badge{
+    background:#dcfce7;
+    color:#16a34a;
+    padding:8px 18px;
+    border-radius:20px;
+    font-weight:600;
+    font-size:14px;
+}
+
+/* ================= CHART ================= */
+
+.recharts-cartesian-grid line{
+    stroke:#e2e8f0;
+}
+
+.recharts-tooltip-wrapper{
+    outline:none;
+}
+
+.recharts-default-tooltip{
+    border:none !important;
+    border-radius:10px !important;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+/* ================= FOOTER ================= */
+
+.weight-footer{
+    margin-top:20px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.weight-item{
+    background:#f8fafc;
+    padding:15px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.weight-item h4{
+    margin:0 0 8px;
+    color:#64748b;
+    font-size:14px;
+    font-weight:600;
+}
+
+.weight-item span{
+    font-size:20px;
+    font-weight:bold;
+    color:#0f172a;
+}
+
+.weight-item .success{
+    color:#16a34a;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    .weight-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+
+    .weight-footer{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .weight-card{
+        padding:18px;
+    }
+
+    .weight-header h3{
+        font-size:18px;
+    }
+
+    .weight-item span{
+        font-size:18px;
+    }
+
+}

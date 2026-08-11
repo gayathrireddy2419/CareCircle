@@ -1,0 +1,69 @@
+package com.carecircle.auth.dto.response;
+
+import java.util.UUID;
+
+import com.carecircle.auth.entity.Role;
+
+public class InternalUserResponse {
+
+    private UUID userId;
+    private UUID familyId;
+    private String fullName;
+    private String mobileNumber;
+    private Role role;
+
+    public InternalUserResponse() {
+    }
+
+    public InternalUserResponse(UUID userId,
+                                UUID familyId,
+                                String fullName,
+                                String mobileNumber,
+                                Role role) {
+        this.userId = userId;
+        this.familyId = familyId;
+        this.fullName = fullName;
+        this.mobileNumber = mobileNumber;
+        this.role = role;
+    }
+
+    public UUID getUserId() {
+        return userId;
+    }
+
+    public void setUserId(UUID userId) {
+        this.userId = userId;
+    }
+
+    public UUID getFamilyId() {
+        return familyId;
+    }
+
+    public void setFamilyId(UUID familyId) {
+        this.familyId = familyId;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public String getMobileNumber() {
+        return mobileNumber;
+    }
+
+    public void setMobileNumber(String mobileNumber) {
+        this.mobileNumber = mobileNumber;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+}

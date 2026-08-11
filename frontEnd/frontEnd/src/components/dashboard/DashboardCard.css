@@ -1,0 +1,23 @@
+/* src/components/dashboard/DashboardCard.css */
+.dash-custom-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.25rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.dash-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.dash-card-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #0f172a;
+}

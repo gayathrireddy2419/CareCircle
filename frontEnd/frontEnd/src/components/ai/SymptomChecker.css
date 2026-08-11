@@ -1,0 +1,177 @@
+/* ==========================================
+   src/components/ai/SymptomChecker.css
+========================================== */
+
+.symptom-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.symptom-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #2563eb;
+}
+
+.symptom-header h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #1e293b;
+}
+
+.symptom-header p {
+    margin-top: 4px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.symptom-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.symptom-form label {
+    font-weight: 600;
+    color: #334155;
+}
+
+.symptom-form textarea,
+.symptom-form input,
+.symptom-form select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    transition: .3s;
+    background: #fff;
+}
+
+.symptom-form textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.symptom-form textarea:focus,
+.symptom-form input:focus,
+.symptom-form select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,.15);
+}
+
+.analyze-btn {
+    margin-top: 10px;
+    background: linear-gradient(135deg,#2563eb,#3b82f6);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: .3s;
+}
+
+.analyze-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(37,99,235,.25);
+}
+
+.result {
+    background: #ecfdf5;
+    border-left: 5px solid #10b981;
+    border-radius: 10px;
+    padding: 18px;
+}
+
+.result-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: #065f46;
+}
+
+.result-title h4 {
+    margin: 0;
+}
+
+.result p {
+    margin: 8px 0;
+    color: #374151;
+    line-height: 1.6;
+}
+
+.result strong {
+    color: #111827;
+}
+
+.result.emergency {
+    background: #fef2f2;
+    border-left: 5px solid #ef4444;
+}
+
+.result.emergency .result-title {
+    color: #b91c1c;
+}
+
+.emergency-warning {
+    margin-top: 15px;
+    padding: 12px;
+    background: #fee2e2;
+    color: #991b1b;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+}
+
+@media (max-width:768px) {
+
+    .symptom-card {
+        padding: 18px;
+    }
+
+    .symptom-header h3 {
+        font-size: 20px;
+    }
+
+    .symptom-form textarea,
+    .symptom-form input,
+    .symptom-form select {
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width:480px) {
+
+    .symptom-card {
+        padding: 15px;
+    }
+
+    .symptom-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .symptom-header h3 {
+        font-size: 18px;
+    }
+
+    .analyze-btn {
+        font-size: 14px;
+    }
+
+}

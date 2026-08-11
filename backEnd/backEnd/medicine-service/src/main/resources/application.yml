@@ -1,0 +1,83 @@
+
+# APPLICATION
+
+server:
+  port: 8086
+
+spring:
+  application:
+    name: medicine-service
+
+  
+ 
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/carecircle_medicine?createDatabaseIfNotExist=true
+    username: root
+    password: ${MYSQL_ROOT_PASSWORD}
+
+  # JPA / HIBERNATE
+  
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    show-sql: true
+
+    properties:
+      hibernate:
+        format_sql: true
+
+ 
+  # SPRING CLOUD CONFIG
+  
+  cloud:
+    config:
+      enabled: false
+
+
+
+# EUREKA
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+    register-with-eureka: true
+    fetch-registry: true
+
+  # Important for Gateway -> Eureka -> Medicine Service
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+
+
+
+# JWT
+
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: 86400000
+
+
+
+# LOGGING
+
+
+logging:
+  level:
+    com.carecircle.medicine.client: DEBUG
+    feign: DEBUG
+
+
+# FEIGN
+
+
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: FULL

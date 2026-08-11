@@ -1,0 +1,192 @@
+/* ==========================================
+   src/components/ai/HealthTips.css
+========================================== */
+
+.health-tips-card{
+    background:#ffffff;
+    border-radius:18px;
+    padding:22px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+/* ================= HEADER ================= */
+
+.tips-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.tips-title{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#2563eb;
+}
+
+.tips-title h3{
+    margin:0;
+    color:#1e293b;
+    font-size:22px;
+}
+
+.refresh-tip{
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:#eff6ff;
+    color:#2563eb;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.3s;
+}
+
+.refresh-tip:hover{
+    background:#2563eb;
+    color:#ffffff;
+    transform:rotate(180deg);
+}
+
+/* ================= TIP ================= */
+
+.tip-content{
+    text-align:center;
+    background:#f8fafc;
+    padding:25px;
+    border-radius:14px;
+}
+
+.tip-icon{
+    width:70px;
+    height:70px;
+    margin:auto;
+    margin-bottom:18px;
+    border-radius:50%;
+    background:#2563eb;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.tip-content h4{
+    margin-bottom:12px;
+    color:#1e293b;
+    font-size:20px;
+}
+
+.tip-content p{
+    color:#64748b;
+    line-height:1.7;
+    font-size:15px;
+}
+
+/* ================= DOTS ================= */
+
+.tip-indicators{
+    display:flex;
+    justify-content:center;
+    gap:8px;
+}
+
+.indicator{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#cbd5e1;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.indicator.active{
+    width:35px;
+    border-radius:20px;
+    background:#2563eb;
+}
+
+/* ================= CHECKLIST ================= */
+
+.quick-tips{
+    border-top:1px solid #e2e8f0;
+    padding-top:20px;
+}
+
+.quick-tips h4{
+    margin-bottom:15px;
+    color:#1e293b;
+}
+
+.quick-tips ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.quick-tips li{
+    padding:10px 0;
+    border-bottom:1px dashed #e2e8f0;
+    color:#334155;
+    font-size:15px;
+}
+
+.quick-tips li:last-child{
+    border-bottom:none;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    .health-tips-card{
+        padding:18px;
+    }
+
+    .tips-title h3{
+        font-size:20px;
+    }
+
+    .tip-content{
+        padding:18px;
+    }
+
+    .tip-icon{
+        width:60px;
+        height:60px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .tips-header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .tips-title{
+        justify-content:center;
+    }
+
+    .tips-title h3{
+        font-size:18px;
+    }
+
+    .tip-content h4{
+        font-size:18px;
+    }
+
+    .tip-content p{
+        font-size:14px;
+    }
+
+    .quick-tips li{
+        font-size:14px;
+    }
+
+}

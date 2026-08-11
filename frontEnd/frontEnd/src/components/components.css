@@ -1,0 +1,29 @@
+/* Cards */
+.ui-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+.ui-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.border-danger { border-left: 4px solid var(--danger); }
+.border-success { border-left: 4px solid var(--secondary); }
+
+/* Tables */
+.table-responsive { width: 100%; overflow-x: auto; }
+.ui-table { width: 100%; border-collapse: collapse; text-align: left; }
+.ui-table th { padding: 0.75rem; border-bottom: 2px solid var(--border); color: var(--text-muted); }
+.ui-table td { padding: 0.75rem; border-bottom: 1px solid var(--border); }
+.empty-state { text-align: center; padding: 2rem; color: var(--text-muted); }
+
+/* Modals */
+.modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; z-index: 1000; }
+.modal-content { background: white; padding: 2rem; border-radius: var(--radius); width: 100%; max-width: 500px; box-shadow: var(--shadow); }
+.modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+.close-btn { background: none; border: none; font-size: 1.5rem; cursor: pointer; }

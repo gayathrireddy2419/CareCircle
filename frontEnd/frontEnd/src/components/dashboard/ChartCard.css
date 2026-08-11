@@ -1,0 +1,14 @@
+/* src/components/dashboard/ChartCard.css */
+.dash-chart-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.dash-chart-header h4 {
+  margin: 0 0 1rem 0;
+  font-size: 1.05rem;
+  color: #1e293b;
+}

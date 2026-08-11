@@ -1,0 +1,139 @@
+/* QuickActionCard.css */
+.quick-card {
+  border-radius: 18px;
+  padding: 1.1rem 1.2rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+  text-align: left;
+  width: 100%;
+}
+
+.quick-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.quick-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.quick-card:hover .quick-icon-wrapper {
+  transform: scale(1.08);
+}
+
+.quick-card-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.quick-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin: 0 0 2px 0;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.quick-subtitle {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+/* Quick Card Themes */
+.quick-card.theme-blue {
+  background: linear-gradient(135deg, #ffffff 0%, #eff6ff 100%);
+  border: 1.5px solid #bfdbfe;
+}
+.quick-card.theme-blue .quick-icon-wrapper {
+  background: #dbeafe;
+  color: #2563eb;
+  border: 1px solid #93c5fd;
+}
+.quick-card.theme-blue .quick-title {
+  color: #0f172a;
+}
+.quick-card.theme-blue .quick-subtitle {
+  color: #2563eb;
+}
+
+.quick-card.theme-green {
+  background: linear-gradient(135deg, #ffffff 0%, #ecfdf5 100%);
+  border: 1.5px solid #a7f3d0;
+}
+.quick-card.theme-green .quick-icon-wrapper {
+  background: #d1fae5;
+  color: #10b981;
+  border: 1px solid #6ee7b7;
+}
+.quick-card.theme-green .quick-title {
+  color: #0f172a;
+}
+.quick-card.theme-green .quick-subtitle {
+  color: #059669;
+}
+
+.quick-card.theme-orange {
+  background: linear-gradient(135deg, #ffffff 0%, #fffbe6 100%);
+  border: 1.5px solid #fde68a;
+}
+.quick-card.theme-orange .quick-icon-wrapper {
+  background: #fef3c7;
+  color: #d97706;
+  border: 1px solid #fcd34d;
+}
+.quick-card.theme-orange .quick-title {
+  color: #0f172a;
+}
+.quick-card.theme-orange .quick-subtitle {
+  color: #d97706;
+}
+
+.quick-card.theme-red {
+  background: linear-gradient(135deg, #ffffff 0%, #fff1f2 100%);
+  border: 1.5px solid #fecdd3;
+}
+.quick-card.theme-red .quick-icon-wrapper {
+  background: #ffe4e6;
+  color: #f43f5e;
+  border: 1px solid #fda4af;
+}
+.quick-card.theme-red .quick-card-body {
+  color: #0f172a;
+}
+.quick-card.theme-red .quick-subtitle {
+  color: #e11d48;
+}
+
+.quick-card.theme-purple {
+  background: linear-gradient(135deg, #ffffff 0%, #faf5ff 100%);
+  border: 1.5px solid #e9d5ff;
+}
+.quick-card.theme-purple .quick-icon-wrapper {
+  background: #f3e8ff;
+  color: #8b5cf6;
+  border: 1px solid #c084fc;
+}
+.quick-card.theme-purple .quick-title {
+  color: #0f172a;
+}
+.quick-card.theme-purple .quick-subtitle {
+  color: #7c3aed;
+}
+

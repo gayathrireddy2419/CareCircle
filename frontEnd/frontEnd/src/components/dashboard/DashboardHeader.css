@@ -1,0 +1,28 @@
+/* src/components/dashboard/DashboardHeader.css */
+.dashboard-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.header-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.header-subtitle {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 4px 0 0 0;
+}
+
+.user-greeting {
+  font-size: 0.9rem;
+  color: #334155;
+  background: #f1f5f9;
+  padding: 6px 14px;
+  border-radius: 20px;
+}

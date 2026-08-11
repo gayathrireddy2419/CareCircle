@@ -1,0 +1,33 @@
+/* src/pages/Profile/Profile.css */
+.profile-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.profile-page-header {
+  margin-bottom: 2rem;
+}
+
+.profile-page-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #0f172a;
+}
+
+.profile-page-header p {
+  margin: 4px 0 0 0;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.profile-layout-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .profile-layout-grid {
+    grid-template-columns: 1fr;
+  }
+}

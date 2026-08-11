@@ -1,0 +1,159 @@
+/* ==========================================
+   src/components/ai/SuggestionCard.css
+========================================== */
+
+.suggestion-card{
+    background:#ffffff;
+    border-radius:16px;
+    padding:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.suggestion-header h3{
+    margin:0;
+    font-size:22px;
+    color:#1e293b;
+    font-weight:700;
+}
+
+.suggestion-header p{
+    margin-top:8px;
+    color:#64748b;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.suggestion-list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.suggestion-item{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    width:100%;
+    border:none;
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    padding:14px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.3s;
+    text-align:left;
+}
+
+.suggestion-item:hover{
+    background:#2563eb;
+    color:#ffffff;
+    transform:translateX(5px);
+}
+
+.suggestion-item:hover .suggestion-icon{
+    background:#ffffff;
+    color:#2563eb;
+}
+
+.suggestion-item:hover .suggestion-text{
+    color:#ffffff;
+}
+
+.suggestion-icon{
+    width:42px;
+    height:42px;
+    min-width:42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#dbeafe;
+    color:#2563eb;
+    transition:.3s;
+}
+
+.suggestion-text{
+    font-size:15px;
+    font-weight:500;
+    color:#334155;
+    transition:.3s;
+}
+
+.suggestion-footer{
+    border-top:1px solid #e2e8f0;
+    padding-top:18px;
+}
+
+.suggestion-footer h4{
+    margin-bottom:15px;
+    color:#1e293b;
+    font-size:17px;
+}
+
+.topic-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.topic-tags span{
+    background:#eff6ff;
+    color:#2563eb;
+    border:1px solid #bfdbfe;
+    border-radius:25px;
+    padding:8px 14px;
+    font-size:13px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.topic-tags span:hover{
+    background:#2563eb;
+    color:#ffffff;
+}
+
+@media(max-width:768px){
+
+    .suggestion-card{
+        padding:16px;
+    }
+
+    .suggestion-header h3{
+        font-size:20px;
+    }
+
+    .suggestion-item{
+        padding:12px;
+    }
+
+    .suggestion-icon{
+        width:36px;
+        height:36px;
+        min-width:36px;
+    }
+
+    .suggestion-text{
+        font-size:14px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .suggestion-header h3{
+        font-size:18px;
+    }
+
+    .suggestion-header p{
+        font-size:13px;
+    }
+
+    .topic-tags span{
+        font-size:12px;
+        padding:6px 12px;
+    }
+
+}

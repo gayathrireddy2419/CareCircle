@@ -1,0 +1,58 @@
+/* src/components/dashboard/RecentActivity.css */
+.recent-activity-container {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.25rem;
+  border: 1px solid #e2e8f0;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #0f172a;
+  margin: 0 0 1rem 0;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-icon-badge {
+  background: #f8fafc;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.activity-info {
+  flex: 1;
+}
+
+.activity-title {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #1e293b;
+}
+
+.activity-desc {
+  font-size: 0.775rem;
+  color: #64748b;
+  margin: 2px 0 0 0;
+}
+
+.activity-time {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}

@@ -1,0 +1,326 @@
+/* --- Header Layout Structural Refinement --- */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-header h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.section-header p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* --- Premium Medical Themed Action Buttons --- */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--primary);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.15);
+  transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.25);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* --- Action Button Bar (Edit / Delete) --- */
+.icon-action-btn {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px;
+  cursor: pointer;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-action-btn:hover {
+  background: #eff6ff;
+  color: var(--primary);
+  border-color: #bfdbfe;
+  transform: translateY(-1px);
+}
+
+.icon-action-btn.delete-btn-accent:hover {
+  background: #fee2e2;
+  color: var(--danger);
+  border-color: #fca5a5;
+}
+
+/* --- Card Body Internal Architecture --- */
+.member-card-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+/* --- High-Contrast Rounded Profile Avatars --- */
+.avatar {
+  font-size: 2rem;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+/* --- Diagnostic Metadata Styling --- */
+.meta-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.meta-details p {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.4;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #f1f5f9;
+  padding-bottom: 0.25rem;
+}
+
+.meta-details p:last-child {
+  border-bottom: none;
+}
+
+.meta-details strong {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+/* --- Biometric Vitals Dashboard Grid Strip --- */
+.vitals-summary-strip {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  background: #f8fafc;
+  padding: 0.85rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.vital-tag {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.vital-tag span {
+  font-weight: 700;
+  color: var(--text-main);
+  font-size: 1rem;
+  margin-top: 0.2rem;
+  text-transform: none;
+}
+
+/* --- Interactive BMI Calculator Submodule Element --- */
+.bmi-calculator-box {
+  background: #f0fdf4;
+  border: 1px dashed var(--secondary);
+  padding: 1.25rem;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+}
+
+.bmi-calculator-box h5 {
+  color: var(--secondary-hover);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.bmi-inputs {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.bmi-result-badge {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #166534;
+  background: #dcfce7;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* --- Interactive Clickable Card Wrappers --- */
+.clickable-card-wrapper {
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clickable-card-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================================================
+   EXTENDED DETAILED PROFILE OVERLAYS (MODAL EXPANSIONS)
+   ========================================================================== */
+.profile-deep-dive {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.profile-hero-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #bfdbfe;
+}
+
+.vitals-extended-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+}
+
+.vital-large-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.vital-large-card h5 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.35rem;
+}
+
+.vital-large-card p {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+.vital-large-card span {
+  display: block;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+/* --- Clean Form Modals --- */
+.modal-form-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.modal-form-layout .form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.modal-form-layout input,
+.modal-form-layout select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: #f8fafc;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.modal-form-layout input:focus,
+.modal-form-layout select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* --- Tablet and Mobile Optimization Layer --- */
+@media (max-width: 640px) {
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .btn-primary {
+    width: 100%;
+  }
+
+  .member-card-body {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .meta-details p {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1rem;
+  }
+
+  .vitals-summary-strip {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .vitals-extended-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
