@@ -1,73 +1,39 @@
-# CARECIRCLE API GATEWAY
-
-spring:
+﻿spring:
   application:
     name: carecircle-api-gateway
 
   main:
     web-application-type: reactive
 
-  # SPRING CLOUD GATEWAY
- 
-
   cloud:
     gateway:
-
-    
-      # GLOBAL CORS
-  
-
       globalcors:
         cors-configurations:
           '[/**]':
             allowedOrigins:
               - "http://localhost:3000"
               - "http://localhost:5173"
-
+              - "https://care-circle-ruby.vercel.app"
             allowedMethods:
               - GET
               - POST
               - PUT
               - DELETE
               - OPTIONS
-
             allowedHeaders:
               - "*"
-
             allowCredentials: true
 
-     
-      # GATEWAY ROUTES
-     
-
       routes:
-
-       
-        # AUTH SERVICE
-        # Port: 8081
-        # Eureka: carecircle-auth-service
-      
-
         - id: auth-service
           uri: lb://carecircle-auth-service
           predicates:
             - Path=/auth/**,/family/members/**
 
-      
-        # NOTIFICATION SERVICE
-        # Port: 8082
-        # Eureka: notification-service
-     
-
         - id: notification-service
           uri: lb://notification-service
           predicates:
             - Path=/api/notifications/**
-
-      
-        # CHAT SERVICE
-        # Port: 8083
-        # Eureka: chat-service / ChatApp
 
         - id: chat-service
           uri: lb://chat-service
@@ -79,33 +45,15 @@ spring:
           predicates:
             - Path=/api/chat/**
 
-    
-        # EMERGENCY SERVICE
-        # Port: 8084
-        # Eureka: emergency-service
-      
-
         - id: emergency-service
           uri: lb://emergency-service
           predicates:
             - Path=/api/emergency/**
 
-      
-        # HEALTH RECORD SERVICE
-        # Port: 8085
-        # Eureka: health-record-service
-       
-
         - id: health-record-service
           uri: lb://health-record-service
           predicates:
             - Path=/api/records/**
-
-       
-        # MEDICINE SERVICE
-        # Port: 8086
-        # Eureka: medicine-service
-       
 
         - id: medicine-medications
           uri: lb://medicine-service
@@ -127,38 +75,20 @@ spring:
           predicates:
             - Path=/api/stock-transactions/**
 
-       
-        # HEALTH METRICS SERVICE
-        # Port: 8088
-        # Eureka: health-metrics-service
-        
         - id: health-metrics-service
           uri: lb://health-metrics-service
           predicates:
             - Path=/api/v1/health-metrics/**
 
-
-# SERVER
-
-
 server:
-  port: 8090
-
-
-
-# EUREKA CLIENT
+  port: ${PORT:8090}
 
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
-
+      defaultZone: ${EUREKA_SERVER_URL:http://localhost:8761/eureka}
     register-with-eureka: true
     fetch-registry: true
-
-
-
-# ACTUATOR
 
 management:
   endpoints:
@@ -168,17 +98,9 @@ management:
           - health
           - info
           - gateway
-
   endpoint:
     health:
       show-details: always
-
-    gateway:
-      enabled: true
-
-
-
-# DEBUG LOGGING
 
 logging:
   level:
